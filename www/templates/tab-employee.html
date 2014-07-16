@@ -1,0 +1,29 @@
+<style>
+    .bar-subheader{
+        border-bottom: 0px;
+        margin-bottom: 1px;
+    }
+    .has-subheader{
+        top:90px;
+    }
+</style>
+<ion-view title="Employee">
+    <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" ng-change="search()">
+        </label>
+        <button class="button button-assertive" ng-click="clearSearch()">Clear</button>
+    </div>
+    <ion-content class="has-header has-subheader">
+        <div class="list">
+            <p style="text-align: center;color: #ef4e3a" ng-if="count===0">No Record Found.</p>
+            <a class="item item-thumbnail-left" ng-repeat="employee in employees" type="item-text-wrap" href="">
+                <img src="pics/{{employee.pic}}" alt=""/>            
+                <h3>{{employee.firstName}} {{employee.lastName}}</h3>
+                <p>{{employee.title}}</p>
+            </a>
+        </div>
+
+    </ion-content>
+</ion-view>
