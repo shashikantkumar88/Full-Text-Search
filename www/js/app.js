@@ -51,18 +51,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('tab.employee', {
       url: '/employee',
       views: {
-        'tab-friends': {
+        'tab-employee': {
           templateUrl: 'templates/tab-employee.html',
           controller: 'EmployeeCtrl'
-        }
-      }
-    })
-    .state('tab.employee-detail', {
-      url: '/employee/:EmployeeId',
-      views: {
-        'tab-friends': {
-          templateUrl: 'templates/employee-detail.html',
-          controller: 'EmployeeDetailCtrl'
         }
       }
     })

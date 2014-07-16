@@ -12,7 +12,7 @@ angular.module('starter.controllers', [])
             };
 
             $scope.search = function() {
-                EmployeeService.findByAllText($scope.searchKey).then(function(employees) {
+                EmployeeService.findByAllDetail($scope.searchKey).then(function(employees) {
                     $scope.count = employees.length;
                     $scope.employees = employees;
                 });

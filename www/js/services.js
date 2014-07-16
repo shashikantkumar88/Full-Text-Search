@@ -30,7 +30,7 @@ angular.module('starter.services', [])
                     deferred.resolve(employees);
                     return deferred.promise;
                 },
-                findByAllText: function(searchKey) {
+                findByAllDetail: function(searchKey) {
                     var deferred = $q.defer();
                     var results = employees.filter(function(element) {
                         var fullName = element.firstName + element.city;
